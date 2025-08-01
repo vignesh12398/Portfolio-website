@@ -1,0 +1,122 @@
+.navbar {
+    background: #181818;
+    width: 98px;
+    height: 100%;
+    top: 0%;
+    z-index: 3;
+    min-height: 990px;
+
+    .logo {
+        display: block;
+        padding: 8px 0;
+    }
+
+    img {
+        display: block;
+        margin: 8px auto;
+        width: 71px;
+        height: auto;
+
+        &.sub {
+            width: 100px;
+        }
+        &.sup{
+            width: 100px;
+        }
+    }
+
+
+
+    nav {
+        display: block;
+        text-align: center;
+        height: 210px;
+        top: 50%;
+        margin-top: 0px;
+        width: 100%;
+
+        a {
+            font-size: 22px;
+            color: #4d4d4e;
+            display: block;
+            line-height: 45px;
+            position: relative;
+            text-decoration: none;
+
+
+
+            i {
+                transition: all 0.3s ease-out
+            }
+
+            &:hover {
+                color: #ffd700;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-size: 9px;
+                letter-spacing: 2px;
+                bottom: 0;
+                display: block;
+                width: 1005;
+                text-align: center;
+                opacity: 0;
+                transition: all 0.3s ease-out;
+            }
+
+             &:first-child{
+                &:after {
+                    content: 'Home';
+                }
+            }
+        }
+
+        a.About {
+            &:after {
+                content: 'About';
+            }
+        }
+
+        a.Contact {
+            &:after {
+
+
+                content: 'Contact'
+            }
+        }
+      
+    }
+    ul {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+ 
+  gap: 15px;
+
+  li {
+    a {
+      color: #4d4d4e;
+      font-size: 20px;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #ffd700;
+      }
+    }
+  }
+}
+
+}
